@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">{{request.user.username | titlecase}}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Start Date: {{request.startDate | date}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">End Date: {{request.endDate | date}}</h6>
+    <p class="card-text">{{request.reason}}</p>
+    <button class="btn btn-success" type="button" (click)="accept(request.id)" >Accept</button>
+    <button class="btn btn-danger" type="button" (click)="reject(request.id)">Reject</button>
+  </div>
+</div>

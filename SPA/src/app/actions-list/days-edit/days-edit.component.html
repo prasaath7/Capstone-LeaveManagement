@@ -1,0 +1,14 @@
+<div *ngIf="!editMode" style="float: right;">
+  <h2>
+    Leave Days:<span class="badge badge-secondary">{{days}}</span>
+    <button class="btn btn-primary btn-sm mr-2" (click)="editToggle()"  >Edit</button>
+  </h2>
+  
+</div>
+
+<div *ngIf="editMode" style="float: right;">
+ <h2>
+   Leave Days: <input #change type ="number" id ="daysToChange" name = "daysToChange" style="width: 50px;">
+   <button class="btn btn-primary btn-sm mr-2" (click)="changeDays(change.value)">Change</button>
+ </h2>
+</div>

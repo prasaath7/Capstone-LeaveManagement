@@ -1,0 +1,12 @@
+<app-days-edit></app-days-edit>
+
+<div class="container" style="padding-top: 1em;" >
+
+    <div class="row mt-5" >
+    
+        <div *ngFor="let request of requests" class="col-lg-4 col-md-6 col-sm-8 " style="padding-top: 2em;" >
+            <app-actions-card [request]="request"></app-actions-card>
+        </div>
+    
+    </div>
+</div>
